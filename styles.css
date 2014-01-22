@@ -1,0 +1,29 @@
+
+body {
+    background: #333;
+    color: #cdcdcd;
+    margin: 3em auto;
+    width: 567px;
+    font: 28px/34px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.col {
+    margin: 0px;
+    float: left;
+}
+.legend {margin-top: 10px;}
+.colpair {
+    float: left;
+    height: 355px;
+}
+:not(:last-child).colpair {
+    margin-right: 20px;
+    border-right: 1px solid #454545;
+}
+.cell {
+    width: 55px;
+    height: 55px;
+    margin: 0 20px 20px 0;
+    text-align: center;
+}
+.dark {background: #454545;}
+.light {background: #ccc;}
