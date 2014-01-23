@@ -13,8 +13,14 @@
   :cljsbuild { 
     :builds [{:id "binclock"
               :source-paths ["src"]
-              :compiler {
-                :output-to "binclock.js"
-                :output-dir "out"
-                :optimizations :none
-                :source-map true}}]})
+              :compiler {:output-to "binclock.js"
+                         :output-dir "out"
+                         :optimizations :none
+                         :source-map true}}
+             {:id "release"
+              :source-paths ["src"]
+              :compiler {:output-to "binclock-min.js"
+                         :optimizations :advanced
+                         :externs ["react.js"]
+                         :output-wrapper true
+                         :pretty-print false}}]})
