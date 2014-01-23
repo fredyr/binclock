@@ -1,2 +1,3 @@
 
-A binary clock.  
+A binary clock.
+

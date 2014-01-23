@@ -86,21 +86,9 @@
 (def app-state (atom {:time (time->bits (get-time))
                       :legend [8 4 2 1]}))
 
-(comment
-  (defn table-row [text owner]
-    (prn (om/value text))
-    (om/component
-     (dom/tr nil (dom/td nil (om/value text)))))
-  (defn table-test [rows owner]
-    (om/component
-     (dom/table nil (om/build-all table-row rows))))
-  (defn remove-first [rows]
-    (om/update! rows 
-                #(into [] (drop 1 %)))))
-
 (om/root
  app-state
- (fn [{:keys [time legend]} owner]
+ (fn [{:keys [legend time] :as app} owner]
    (reify
      om/IWillMount
      (will-mount [_]
@@ -114,4 +102,3 @@
                 (om/build column-pair (:minutes time))
                 (om/build column-pair (:seconds time))))))
  (.getElementById js/document "content"))
-
