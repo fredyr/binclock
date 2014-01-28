@@ -33,7 +33,7 @@
 
 (defn n->bits
   "number => number + bit lists 
-   e.g 53 => [[5 [false true false false]] [3 [true false false false]]]
+   e.g 53 => [[5 [false true false true]] [3 [false false true true]]]
    we're keeping the original digit so that we can show them together with
    the bit patterns later on"
   [n]
