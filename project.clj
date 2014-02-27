@@ -15,16 +15,17 @@
                         :compiler {:output-to "binclock.js"
                                    :output-dir "out"
                                    :optimizations :none
-                                   :source-map true}}
+                                   :source-map  true}}
 
                        
                        {:id "release"
                         :source-paths ["src"]
                         :compiler {
                                    :output-to "binclock-min.js"
+                                   ;; :output-wrapper true ;; don't know why this would be necessary?
                                    :optimizations :advanced
                                    :pretty-print false
+                                   :source-map  "binclock.js.map"
                                    :preamble ["react/react.min.js"]
-                                   ;; :output-wrapper true ;; don't know why this would be necessary?
                                    :externs ["react/externs/react.js"]}}]})
 
