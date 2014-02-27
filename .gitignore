@@ -1,0 +1,6 @@
+*~
+out/
+*.map
+target/
+binclock.js
+binclock-min.js
